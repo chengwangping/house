@@ -1,0 +1,126 @@
+html{
+	max-width:750px;
+	margin:auto;
+};
+.wrapper{
+    .board{
+        background:#fff;
+    }
+	.shade,.diagle{
+	    width:100%;
+	    height:100%;
+	    position: fixed;
+	    left:0;
+	    top:0;
+	    background:rgba(0,0,0,1);
+	    z-index: 999;
+	}
+    .diagle{
+        background:rgba(0,0,0,.5);
+        max-width: 750px;
+        left:auto;
+        .content{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            transition: transform .5s ease-in;
+            background:#fff;
+            width:85%;
+            h6{
+                padding:1rem 0.5rem;
+                font-size: 1.1rem;
+            }
+            &.active{
+                transform: translate(-50%,-50%);
+                transition: transform .4s cubic-bezier(.175, .885, .32, 1.1);
+            }
+        }
+    }
+	.bg{
+        width:100%;
+        height:100%;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 1;
+    }
+    h6{
+        &.title{
+            font-size: .9rem;
+            line-height: 2.5rem;
+            padding-left:15px;
+            color: #202020;
+        }
+    }
+    .footer{
+        width:100%;
+        height:3.6rem;
+        .main{
+            position:fixed;
+            display:flex;
+            color:#202020;
+            bottom:0px;
+            height:3.5rem;
+            font-size:1rem;
+            z-index: 99;
+            width:100%;
+            background-color: #FFF;
+            max-width: 750px;
+            .name{
+                flex:5;
+                padding:7px 15px;
+                a{
+                    display:block;
+                    .img{
+                        width:2.6rem;
+                        height:2.6rem;
+                        float:left;
+                        margin-right: 10px;
+                        img{
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                    .text{
+                        padding-left:2.3rem;
+                        line-height: 1;
+                        h6{
+                            font-size:0.875rem;
+                            color:#202020;
+                            line-height: 1.5;
+                        }
+                        p{
+                            font-size:0.75rem;
+                            color:#aaa;
+                        }
+                    }
+                }
+            }
+            .mobile,.info{
+                text-align:center;
+                flex:3;
+                line-height: 3.5rem;
+                .fa{
+                    color:#ffce05;
+                    font-size: 1.2rem;
+                    margin-right: 5px;
+                }
+                a{
+                    display:block;
+                    width:100%;
+                    color:#202020;
+                    height:100%;
+                }
+            }
+        }
+    }
+}
+@keyframes rotateData{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
